@@ -1,0 +1,16 @@
+//this function takes two arrays as parameter
+function except(array, excluded) {
+    //create an empty array
+    const output = [];
+    for (let element of array)
+        // if the element is not in the 'excluded' array
+        if (!excluded.includes(element))
+            output.push(element);
+    return output;
+}
+
+const numbers = [1, 2, 3, 4, 1];
+const exp = [1, 2];
+
+console.log(except(numbers, exp));       
+//result: [3,4]
