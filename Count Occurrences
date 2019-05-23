@@ -1,0 +1,22 @@
+const numbers = [1, 2, 3, 4, 1];
+
+//count the occurence of a searchElement in an array
+function countOccurrences1(array, searchElement) {
+    return array.reduce((count, eachElement) => {
+        if (eachElement === searchElement)
+            count++;
+        return count;
+    }, 0);
+}
+
+console.log(countOccurrences1(numbers, 1));
+
+//this is a clearer form 
+function countOccurrences2(array, searchElement) {
+    return array.reduce((count, eachElement) => {
+        let occurrence = (eachElement === searchElement);
+        return count + occurrence;
+    }, 0);
+}
+
+console.log(countOccurrences2(numbers, 1));
