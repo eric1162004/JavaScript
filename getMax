@@ -1,0 +1,10 @@
+const numbers = [0, 1];
+
+//return the max value in an array
+function getMax(array) {
+    return array.reduce((accumulator, eachElement) => {
+        return (accumulator < eachElement) ? eachElement : accumulator;
+    })
+}
+
+console.log(getMax(numbers));
