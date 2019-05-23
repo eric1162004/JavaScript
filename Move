@@ -1,4 +1,4 @@
-//this code move an element in an array by a offset value
+//this code moves an element in an array by a offset value
 
 const numbers = [1, 2, 3, 4];
 
