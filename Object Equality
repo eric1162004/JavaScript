@@ -1,0 +1,29 @@
+let add1 = new address('a', 'b', 'c');
+let add2 = new address('a', 'b', 'c');
+
+function address(street, city, zipCode) {
+    this.street = street;
+    this.city = city;
+    this.zipCode = zipCode;
+}
+
+//Return whether two objects are copies of each other
+function areEqual(address1, address2) {
+    let isValid = true;
+    for (let key in address1)
+        if (address1[key] === address2[key])
+            isValid = true;
+        else
+            isValid = false;
+
+    return isValid;
+}
+
+console.log(areEqual(add1, add2));
+
+// Return whether two objects are the same  
+function areSame(address1, address2) {
+   return address1 === address2;
+}
+
+console.log(areSame(add1, add2));
