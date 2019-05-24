@@ -1,0 +1,15 @@
+// construct a radius setter
+// construct a area getter 
+
+const circle = {
+    radius: 2,
+    set setRadius(r) {
+        this.radius = r;
+    },
+    get getArea() {
+        return this.radius ** 2 * Math.PI;
+    }
+}
+
+console.log(circle.setRadius = 2);
+console.log(circle.getArea);
