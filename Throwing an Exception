@@ -1,0 +1,14 @@
+//Throw an exception if input is not an array
+function printArray(numbers) {
+    if (!Array.isArray(numbers))
+        throw new Error('this is not an array');
+    console.log(numbers);
+}
+
+try {
+    const array1 = [1];
+    printArray(array1);
+}
+catch (e) {
+    console.log(e.message);
+}
