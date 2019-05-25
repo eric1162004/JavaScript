@@ -1,0 +1,28 @@
+function Fruits() {
+    this.click = function () {
+        console.log('clicked');
+    }
+}
+
+Fruits.prototype.focus = function () {
+    console.log('focused');
+}
+
+const e = new Fruits();
+
+e.click();
+
+function Apples(items = []) {
+    this.items = items;
+    this.addItem = function (item) {
+        this.items.push(item);
+    }
+    this.removeItem = function (item) {
+        this.items.splice(this.items.indexOf(item), 1);
+    }
+}
+
+Apples.prototype = new Fruits();
+Apples.prototype.constructor = Apples;
+
+const s = new Apples();
