@@ -1,0 +1,14 @@
+//Private Members Using Symbols
+
+const _radius = Symbol();
+const _draw =  Symbol();
+
+class Circle {
+    constructor(radius){
+        this[_radius] = radius;
+    }
+    // [..] computed property name
+    [_draw](){
+
+    }
+}
