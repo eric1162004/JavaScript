@@ -1,0 +1,9 @@
+//Static Methods are used directly with the class object
+
+class Math2 {
+    static abs(value) {
+        //....
+    }
+}
+
+Math2.abs(2);
