@@ -1,0 +1,26 @@
+//Class Inheritance 
+
+// if the super takes in argument, the base class
+// must reference to the super class in the constructor
+
+class Shape {
+    constructor(color) {
+        this.color = color;
+    }
+    move() {
+        console.log('move');
+    }
+}
+
+class Circle extends Shape {
+    constructor(color) {
+        //must reference to the super class
+        super(color);
+    }
+
+    draw() {
+        console.log('draw');
+    }
+}
+
+const c = new Circle('red');
