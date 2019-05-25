@@ -1,0 +1,15 @@
+class Circle {
+    constructor(radius){
+        this.radius;
+        // this method will end up in object instance
+        this.move = function(){
+
+        }
+    }
+    //this method will end up in the prototype
+    draw() {
+        console.log('draw');
+    }
+}
+
+const c =  new Circle(1);
