@@ -45,7 +45,7 @@ var users = [user1, user2];
 
 
 
-// ===== Old method of create Class and objects =======================
+// ===== Old method of creating Class and objects =======================
 
 //creating a class using constructor
 function Person(name, age) {
