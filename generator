@@ -1,0 +1,22 @@
+//Generator Example
+
+// Generator runs in right to left direction 
+// .next() is like a play button of a generator
+// A generator will not do anything unless you 'play' it
+// yield is like a pause button of a generator
+// whatever comes before the yield keyword in the code block becomes the value of the iterator object
+// whatever passes to the .next(x) will be assigned to a variable after the yield keyword in the code block
+
+function* gen(){
+    let x = yield "pear";
+    let y = yield "banana";
+    let z = yield "apple";
+   return x+y+z; 
+}
+
+let myGen = gen();
+
+console.log(myGen.next());
+console.log(myGen.next(1));
+console.log(myGen.next(2));
+console.log(myGen.next(3));
