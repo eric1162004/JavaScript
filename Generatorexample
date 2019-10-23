@@ -1,0 +1,30 @@
+function one(){
+    return 1;
+}
+function two(){
+    return 2;
+}
+function three(){
+    return 3;
+}
+
+function* gen(){
+    let x = yield one();
+    let y = yield two();
+    let z = yield three();
+   return x+y+z; 
+}
+
+let myGen = gen();
+
+function handle(yielded){
+
+    if(!yielded.done){
+        let num = yielded.value;
+        console.log(yielded);
+        return handle(myGen.next(num));
+    }
+    console.log(yielded);
+}
+
+handle(myGen.next());
